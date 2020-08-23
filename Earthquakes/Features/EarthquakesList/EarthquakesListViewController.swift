@@ -3,10 +3,12 @@ import Foundation
 import UIKit
 
 final class EarthquakesViewController: UIViewController {
-
+    private let errorViewHeight: CGFloat = 30.0
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var earthquakesList: UITableView!
+    @IBOutlet weak var errorViewHeightConstraint: NSLayoutConstraint!
     private lazy var presenter: EarthquakesPresenter = {
         return EarthquakesBuilder.build(view: self)
     } ()
@@ -33,8 +35,10 @@ extension EarthquakesViewController: EarthquakesView {
         if let error = viewModel.error {
             errorLabel.isHidden = false
             errorLabel.text = error
+            errorViewHeightConstraint.constant = errorViewHeight
         } else {
             errorLabel.isHidden = true
+            errorViewHeightConstraint.constant = 0
         }
 
         setNewDatasource(earthquakes: viewModel.earthquakes)
