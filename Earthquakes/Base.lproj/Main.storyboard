@@ -112,11 +112,30 @@
                         <outlet property="earthquakesList" destination="w19-3d-G3k" id="w5S-sH-BVg"/>
                         <outlet property="errorLabel" destination="rzN-lq-V9G" id="ttg-gk-R7c"/>
                         <outlet property="errorViewHeightConstraint" destination="TuF-t2-08k" id="yU6-al-ILe"/>
+                        <segue destination="Gej-ZO-IFm" kind="show" identifier="showEarthquakeDetails" id="wd5-8r-0LY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="538" y="-512"/>
+        </scene>
+        <!--Earthquake Details View Controller-->
+        <scene sceneID="VcB-fI-IdI">
+            <objects>
+                <viewController id="Gej-ZO-IFm" customClass="EarthquakeDetailsViewController" customModule="Earthquakes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BUt-6N-QSh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jZa-7c-PNE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="X40-8Q-GKa">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="p9N-rg-9IV"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfW-vc-TOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="379"/>
         </scene>
     </scenes>
 </document>

@@ -1,7 +1,7 @@
 import Foundation
 
 protocol EarthquakesView: class {
-   func updateView(with viewModel: EarthquakesViewModel)
+    func updateView(with viewModel: EarthquakesViewModel)
 }
 
 final class EarthquakesPresenter {
@@ -45,12 +45,17 @@ final class EarthquakesPresenter {
         })
     }
     
+    func prepareBuilerForEarthquakeDetailsModule(with earthquake: Earthquake) -> EarthquakeDetailsBuilder {
+        return EarthquakeDetailsBuilder(earthquake: earthquake)
+    }
+    
     private func prepareEarthquakeToShow(earthquake: Earthquake) -> EarthquakeToShow {
         return EarthquakeToShow(
             country: earthquake.src,
             date: EarthquakesPresenter.dataFormatter.string(from: earthquake.datetime),
             magnitude: String(format: "%.1f", earthquake.magnitude),
-            isEarthquakeBig: earthquake.magnitude >= 8.0
+            isEarthquakeBig: earthquake.magnitude >= 8.0,
+            rawModel: earthquake
         )
     }
     

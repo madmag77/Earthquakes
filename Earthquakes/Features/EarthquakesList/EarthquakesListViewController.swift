@@ -4,6 +4,7 @@ import UIKit
 
 final class EarthquakesViewController: UIViewController {
     private let errorViewHeight: CGFloat = 30.0
+    private let earthquakeDetailsSegueIdentifier = "showEarthquakeDetails"
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var errorLabel: UILabel!
@@ -20,6 +21,16 @@ final class EarthquakesViewController: UIViewController {
         earthquakesList.delegate = self
         
         presenter.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier,
+            identifier == earthquakeDetailsSegueIdentifier,
+            let earthquake = sender as? Earthquake,
+            let detailsVC = segue.destination as? EarthquakeDetailsViewController
+        else { return }
+        
+        presenter.prepareBuilerForEarthquakeDetailsModule(with: earthquake).build(view: detailsVC)
     }
 }
 
@@ -47,6 +58,6 @@ extension EarthquakesViewController: EarthquakesView {
 
 extension EarthquakesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: earthquakeDetailsSegueIdentifier, sender: datasource.earthquakes[indexPath.row].rawModel)
     }
 }

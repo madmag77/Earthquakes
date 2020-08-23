@@ -39,4 +39,6 @@ struct EarthquakeToShow {
     let date: String
     let magnitude: String
     let isEarthquakeBig: Bool
+    
+    let rawModel: Earthquake
 }
