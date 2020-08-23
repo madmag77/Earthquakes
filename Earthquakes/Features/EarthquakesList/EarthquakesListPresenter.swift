@@ -55,9 +55,9 @@ final class EarthquakesPresenter {
     private func prepareErrorToShow(error: BackendError) -> String {
         switch error {
         case .noNetwork:
-            return "No Internet connection. Please connect to the network"
+            return "No Internet Connection."
         case .serverError:
-            return "Server error. Please try later"
+            return "Server Error. Please try later"
         case .clientError(let clientError):
             return clientError.message
         }
