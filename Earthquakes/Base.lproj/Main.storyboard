@@ -126,12 +126,26 @@
                     <view key="view" contentMode="scaleToFill" id="BUt-6N-QSh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DcQ-aV-VrX">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DcQ-aV-VrX" firstAttribute="leading" secondItem="jZa-7c-PNE" secondAttribute="leading" id="MU7-tm-Xph"/>
+                            <constraint firstItem="DcQ-aV-VrX" firstAttribute="top" secondItem="jZa-7c-PNE" secondAttribute="top" id="VnL-2j-fKo"/>
+                            <constraint firstAttribute="bottom" secondItem="DcQ-aV-VrX" secondAttribute="bottom" id="XQf-3x-lAs"/>
+                            <constraint firstItem="jZa-7c-PNE" firstAttribute="trailing" secondItem="DcQ-aV-VrX" secondAttribute="trailing" id="mQP-vs-zz8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jZa-7c-PNE"/>
                     </view>
                     <navigationItem key="navigationItem" id="X40-8Q-GKa">
                         <barButtonItem key="backBarButtonItem" title="Back" id="p9N-rg-9IV"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="DcQ-aV-VrX" id="ORz-mg-OM8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfW-vc-TOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

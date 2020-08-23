@@ -27,6 +27,7 @@
 		EBB8533424F2948F00DC60D4 /* EarthquakeDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8533324F2948F00DC60D4 /* EarthquakeDetailsBuilder.swift */; };
 		EBB8533624F29CD300DC60D4 /* EarthquakeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8533524F29CD300DC60D4 /* EarthquakeDetailsPresenter.swift */; };
 		EBB8533824F29D6500DC60D4 /* EarthquakeDetailsViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8533724F29D6500DC60D4 /* EarthquakeDetailsViewmodel.swift */; };
+		EBB8533A24F2A3D700DC60D4 /* EarthquakeMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8533924F2A3D700DC60D4 /* EarthquakeMark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		EBB8533324F2948F00DC60D4 /* EarthquakeDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeDetailsBuilder.swift; sourceTree = "<group>"; };
 		EBB8533524F29CD300DC60D4 /* EarthquakeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeDetailsPresenter.swift; sourceTree = "<group>"; };
 		EBB8533724F29D6500DC60D4 /* EarthquakeDetailsViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeDetailsViewmodel.swift; sourceTree = "<group>"; };
+		EBB8533924F2A3D700DC60D4 /* EarthquakeMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeMark.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				EBB8533324F2948F00DC60D4 /* EarthquakeDetailsBuilder.swift */,
 				EBB8533524F29CD300DC60D4 /* EarthquakeDetailsPresenter.swift */,
 				EBB8533724F29D6500DC60D4 /* EarthquakeDetailsViewmodel.swift */,
+				EBB8533924F2A3D700DC60D4 /* EarthquakeMark.swift */,
 			);
 			path = "Earthquake Details";
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				EBB8533424F2948F00DC60D4 /* EarthquakeDetailsBuilder.swift in Sources */,
 				EB6A822624E06A1E00F18765 /* EarshquakesService.swift in Sources */,
 				EB6A823424E080D700F18765 /* EarthquakeDatasource.swift in Sources */,
+				EBB8533A24F2A3D700DC60D4 /* EarthquakeMark.swift in Sources */,
 				EB6A822024E065D400F18765 /* RestTransport.swift in Sources */,
 				EB6A822E24E06DFA00F18765 /* EarthquakesBuilder.swift in Sources */,
 				EB6A81F924E062EB00F18765 /* AppDelegate.swift in Sources */,
