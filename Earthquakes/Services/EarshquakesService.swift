@@ -12,6 +12,6 @@ func getEarthquakes(transport: RestTransport) -> (Double, Double, Double, Double
                             "west": west],
                           transform: { (earthquakesResponse: EarthquakesResponse) in
                             earthquakesResponse.earthquakes },
-                          callback: callback)
+                          callback: { response in DispatchQueue.main.async { callback(response) } } )
         }
 }

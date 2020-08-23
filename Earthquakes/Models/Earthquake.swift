@@ -1,7 +1,7 @@
 import Foundation
 
 struct Earthquake: Codable, Equatable {
-    let datetime: String
+    let datetime: Date
     let depth: Double
     let lng: Double
     let src: String

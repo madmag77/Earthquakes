@@ -1,7 +1,7 @@
 import Foundation
 
 protocol RestTransport {
-    func get<S: Decodable, D>(endpoint: String, parameters: [String: Any], transform: @escaping (S)->(D), callback: @escaping (Response<D>) -> ())
+func get<S: Decodable, D>(endpoint: String, parameters: [String: Any], transform: @escaping (S)->(D), callback: @escaping (Response<D>) -> ())
 }
 
 struct RestTransportImpl: RestTransport {
@@ -49,6 +49,7 @@ struct RestTransportImpl: RestTransport {
             
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
+            decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
             
             let errorHandler: (Data) -> () = { body in
                 do {
@@ -77,4 +78,15 @@ struct RestTransportImpl: RestTransport {
             }
         }).resume()
     }
+}
+
+extension DateFormatter {
+  static let iso8601Full: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    formatter.calendar = Calendar(identifier: .iso8601)
+    formatter.timeZone = TimeZone(secondsFromGMT: 0)
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+    return formatter
+  }()
 }
