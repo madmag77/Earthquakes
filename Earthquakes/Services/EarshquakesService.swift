@@ -1,7 +1,7 @@
 import Foundation
 
 
-// TODO: implement paging as now it doesn't make sense to use it for 10 items
+// TODO: implement paging as now it doesn't make sense to do it for 10 items
 func getEarthquakes(transport: RestTransport) -> (Double, Double, Double, Double, @escaping (Response<[Earthquake]>) -> ()) -> () {
     return { north, south, east, west, callback in
             transport.get(endpoint: "earthquakesJSON",

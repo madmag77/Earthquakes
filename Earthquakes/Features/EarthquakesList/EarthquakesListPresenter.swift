@@ -45,8 +45,8 @@ final class EarthquakesPresenter {
         })
     }
     
-    func prepareBuilerForEarthquakeDetailsModule(with earthquake: Earthquake) -> EarthquakeDetailsBuilder {
-        return EarthquakeDetailsBuilder(earthquake: earthquake)
+    func prepareBuilerForEarthquakeDetailsModule(with earthquake: EarthquakeToShow) -> EarthquakeDetailsBuilder {
+        return EarthquakeDetailsBuilder(earthquake: earthquake.rawModel)
     }
     
     private func prepareEarthquakeToShow(earthquake: Earthquake) -> EarthquakeToShow {

@@ -11,7 +11,7 @@
 		EB6A820024E062EB00F18765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A81FE24E062EB00F18765 /* Main.storyboard */; };
 		EB6A820224E062EE00F18765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB6A820124E062EE00F18765 /* Assets.xcassets */; };
 		EB6A820524E062EE00F18765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A820324E062EE00F18765 /* LaunchScreen.storyboard */; };
-		EB6A821024E062EE00F18765 /* EarthquakesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A820F24E062EE00F18765 /* EarthquakesTests.swift */; };
+		EB6A821024E062EE00F18765 /* EarthquakesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A820F24E062EE00F18765 /* EarthquakesPresenterTests.swift */; };
 		EB6A821D24E0651200F18765 /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A821C24E0651200F18765 /* Earthquake.swift */; };
 		EB6A822024E065D400F18765 /* RestTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A821F24E065D400F18765 /* RestTransport.swift */; };
 		EB6A822224E066D900F18765 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A822124E066D900F18765 /* Response.swift */; };
@@ -48,7 +48,7 @@
 		EB6A820424E062EE00F18765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB6A820624E062EE00F18765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB6A820B24E062EE00F18765 /* EarthquakesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB6A820F24E062EE00F18765 /* EarthquakesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesTests.swift; sourceTree = "<group>"; };
+		EB6A820F24E062EE00F18765 /* EarthquakesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesPresenterTests.swift; sourceTree = "<group>"; };
 		EB6A821124E062EE00F18765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB6A821C24E0651200F18765 /* Earthquake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
 		EB6A821F24E065D400F18765 /* RestTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTransport.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		EB6A820E24E062EE00F18765 /* EarthquakesTests */ = {
 			isa = PBXGroup;
 			children = (
-				EB6A820F24E062EE00F18765 /* EarthquakesTests.swift */,
+				EB6A820F24E062EE00F18765 /* EarthquakesPresenterTests.swift */,
 				EB6A821124E062EE00F18765 /* Info.plist */,
 			);
 			path = EarthquakesTests;
@@ -314,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB6A821024E062EE00F18765 /* EarthquakesTests.swift in Sources */,
+				EB6A821024E062EE00F18765 /* EarthquakesPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

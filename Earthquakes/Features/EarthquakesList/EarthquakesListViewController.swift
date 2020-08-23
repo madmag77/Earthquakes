@@ -26,7 +26,7 @@ final class EarthquakesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier,
             identifier == earthquakeDetailsSegueIdentifier,
-            let earthquake = sender as? Earthquake,
+            let earthquake = sender as? EarthquakeToShow,
             let detailsVC = segue.destination as? EarthquakeDetailsViewController
         else { return }
         
@@ -58,6 +58,6 @@ extension EarthquakesViewController: EarthquakesView {
 
 extension EarthquakesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: earthquakeDetailsSegueIdentifier, sender: datasource.earthquakes[indexPath.row].rawModel)
+        performSegue(withIdentifier: earthquakeDetailsSegueIdentifier, sender: datasource.earthquakes[indexPath.row])
     }
 }
