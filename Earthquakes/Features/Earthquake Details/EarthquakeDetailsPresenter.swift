@@ -14,6 +14,10 @@ final class EarthquakeDetailsPresenter {
     }
     
     func viewDidLoad() {
-        view.updateView(with: EarthquakeDetailsViewmodel(lat: earthquake.lat, lon: earthquake.lng, earthquakeDescription: "Earthquake"))
+        view.updateView(with: EarthquakeDetailsViewmodel(
+            lat: earthquake.lat,
+            lon: earthquake.lng,
+            earthquakeDescription: "Earthquake in \(earthquake.src.uppercased()) on  \(DateFormatter.earthquakeDisplayDataFormatter.string(from: earthquake.datetime))")
+        )
     }
 }

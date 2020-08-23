@@ -5,13 +5,6 @@ protocol EarthquakesView: class {
 }
 
 final class EarthquakesPresenter {
-    static private var dataFormatter: DateFormatter {
-        let df = DateFormatter()
-        df.dateStyle = .medium
-        df.timeStyle = .none
-        return df
-    }
-    
     private unowned var view: EarthquakesView
     let service: (@escaping (Response<[Earthquake]>) -> ()) -> ()
     
@@ -51,8 +44,8 @@ final class EarthquakesPresenter {
     
     private func prepareEarthquakeToShow(earthquake: Earthquake) -> EarthquakeToShow {
         return EarthquakeToShow(
-            country: earthquake.src,
-            date: EarthquakesPresenter.dataFormatter.string(from: earthquake.datetime),
+            country: earthquake.src.uppercased(),
+            date: DateFormatter.earthquakeDisplayDataFormatter.string(from: earthquake.datetime),
             magnitude: String(format: "%.1f", earthquake.magnitude),
             isEarthquakeBig: earthquake.magnitude >= 8.0,
             rawModel: earthquake

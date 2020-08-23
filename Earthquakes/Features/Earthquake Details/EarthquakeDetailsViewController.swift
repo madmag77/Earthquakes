@@ -6,11 +6,11 @@ final class EarthquakeDetailsViewController: UIViewController {
     @IBOutlet private var mapView: MKMapView!
     
     var presenter: EarthquakeDetailsPresenter?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        navigationItem.backBarButtonItem?.title = "Back"
+        navigationItem.backBarButtonItem?.title = ""
         
         presenter?.viewDidLoad()
     }
@@ -18,6 +18,8 @@ final class EarthquakeDetailsViewController: UIViewController {
 
 extension EarthquakeDetailsViewController: EarthquakeDetailsView {
     func updateView(with viewModel: EarthquakeDetailsViewmodel) {
+        navigationItem.title = viewModel.earthquakeDescription
+        
         mapView.centerToLocation(CLLocation(latitude:viewModel.lat, longitude:  viewModel.lon))
         
         let mark = EarthquakeMark(
@@ -28,7 +30,6 @@ extension EarthquakeDetailsViewController: EarthquakeDetailsView {
 }
 
 extension EarthquakeDetailsViewController: MKMapViewDelegate {
-    
 }
 
 private extension MKMapView {

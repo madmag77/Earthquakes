@@ -28,6 +28,7 @@
 		EBB8533624F29CD300DC60D4 /* EarthquakeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8533524F29CD300DC60D4 /* EarthquakeDetailsPresenter.swift */; };
 		EBB8533824F29D6500DC60D4 /* EarthquakeDetailsViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8533724F29D6500DC60D4 /* EarthquakeDetailsViewmodel.swift */; };
 		EBB8533A24F2A3D700DC60D4 /* EarthquakeMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8533924F2A3D700DC60D4 /* EarthquakeMark.swift */; };
+		EBB8533D24F2DFB800DC60D4 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8533C24F2DFB800DC60D4 /* DateFormatterExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		EBB8533524F29CD300DC60D4 /* EarthquakeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeDetailsPresenter.swift; sourceTree = "<group>"; };
 		EBB8533724F29D6500DC60D4 /* EarthquakeDetailsViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeDetailsViewmodel.swift; sourceTree = "<group>"; };
 		EBB8533924F2A3D700DC60D4 /* EarthquakeMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeMark.swift; sourceTree = "<group>"; };
+		EBB8533C24F2DFB800DC60D4 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		EB6A822724E06D1400F18765 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EBB8533B24F2DFA400DC60D4 /* Common */,
 				EBB8533024F2925C00DC60D4 /* Earthquake Details */,
 				EB6A822824E06D1B00F18765 /* EarthquakesList */,
 			);
@@ -187,6 +190,14 @@
 				EBB8533924F2A3D700DC60D4 /* EarthquakeMark.swift */,
 			);
 			path = "Earthquake Details";
+			sourceTree = "<group>";
+		};
+		EBB8533B24F2DFA400DC60D4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EBB8533C24F2DFB800DC60D4 /* DateFormatterExtension.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 			files = (
 				EBB8533824F29D6500DC60D4 /* EarthquakeDetailsViewmodel.swift in Sources */,
 				EBB8533224F2928A00DC60D4 /* EarthquakeDetailsViewController.swift in Sources */,
+				EBB8533D24F2DFB800DC60D4 /* DateFormatterExtension.swift in Sources */,
 				EB6A823224E07C9900F18765 /* EarthquakeListCellView.swift in Sources */,
 				EB6A822C24E06D9A00F18765 /* EarthquakesListPresenter.swift in Sources */,
 				EBB8533424F2948F00DC60D4 /* EarthquakeDetailsBuilder.swift in Sources */,
